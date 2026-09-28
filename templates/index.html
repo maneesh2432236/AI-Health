@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Health Mirror Pro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="theme-light">
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
+    <nav class="navbar navbar-expand-lg navbar-glass fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="{{ url_for('index') }}">
+                <span class="brand-icon"><i class="bi bi-heart-pulse"></i></span>
+                <div>
+                    <span class="brand-title">AI Health Mirror Pro</span><br>
+                    <small>Hair & Skin Analysis System</small>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#how-it-works">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#technology">Technology</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#benefits">Benefits</a></li>
+                    <li class="nav-item"><button class="btn btn-outline-light theme-toggle" type="button" aria-label="Toggle theme"><i class="bi bi-moon-stars"></i></button></li>
+                    <li class="nav-item"><a class="btn btn-primary btn-pill" href="{{ url_for('login') }}">Login</a></li>
+                    <li class="nav-item"><a class="btn btn-outline-primary btn-pill" href="{{ url_for('signup') }}">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container hero-content">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="hero-badge">AI-powered wellness intelligence</div>
+                    <h1>Smart Hair & Skin Analysis with AI</h1>
+                    <p class="lead">AI Health Mirror Pro helps users review hair and skin wellness patterns with guided recommendations, image analysis workflows, and a polished digital health dashboard.</p>
+                    <div class="hero-actions">
+                        <a href="{{ url_for('signup') }}" class="btn btn-primary btn-pill btn-lg">Get Started</a>
+                        <a href="#how-it-works" class="btn btn-outline-primary btn-pill btn-lg">Learn More</a>
+                    </div>
+                    <div class="hero-stats row mt-4 g-3">
+                        <div class="col-md-4">
+                            <div class="stat-card">
+                                <strong>AI</strong>
+                                <span>Demo Analysis</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stat-card">
+                                <strong>2</strong>
+                                <span>Analysis Types</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stat-card">
+                                <strong>24/7</strong>
+                                <span>Wellness Support</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-visual glass-card">
+                        <div class="scan-ring"></div>
+                        <div class="face-card">
+                            <div class="mini-graph">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                            <div class="avatar-area">
+                                <i class="bi bi-person-bounding-box"></i>
+                            </div>
+                            <div class="analysis-display">
+                                <span class="label">Skin Health</span>
+                                <strong>Balanced</strong>
+                                <small>General guidance mode</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="features" class="section">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <span class="eyebrow">Key Features</span>
+                    <h2>Everything you need for smarter hair and skin care</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card glass-card">
+                            <div class="icon-wrap"><i class="bi bi-camera-fill"></i></div>
+                            <h4>Image Upload & Camera</h4>
+                            <p>Upload JPG, JPEG, or PNG files or use your live camera to capture a selfie for a fast analysis workflow.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card glass-card">
+                            <div class="icon-wrap"><i class="bi bi-graph-up-arrow"></i></div>
+                            <h4>Hair Analysis</h4>
+                            <p>Review visible hair concerns and receive general hair-care guidance, nutrition suggestions, and daily routines.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card glass-card">
+                            <div class="icon-wrap"><i class="bi bi-shield-check"></i></div>
+                            <h4>Skin Analysis</h4>
+                            <p>Examine common skin wellness patterns with safe recommendations and lifestyle guidance suited for everyday wellness.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card glass-card">
+                            <div class="icon-wrap"><i class="bi bi-list-check"></i></div>
+                            <h4>Protocol Recommendations</h4>
+                            <p>Get actionable hair-care, skin-care, diet, home-care, and routine suggestions that are clear and simple to apply.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card glass-card">
+                            <div class="icon-wrap"><i class="bi bi-clock-history"></i></div>
+                            <h4>Analysis History</h4>
+                            <p>Track earlier evaluations and compare results over time across hair and skin analyses tied to your account.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card glass-card">
+                            <div class="icon-wrap"><i class="bi bi-moon-stars"></i></div>
+                            <h4>Modern Experience</h4>
+                            <p>Enjoy a polished responsive dashboard, dark/light themes, and glassmorphism visuals designed for an AI wellness app.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="section alt-bg">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <span class="eyebrow">How It Works</span>
+                    <h2>From image capture to wellness guidance</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="step-card glass-card text-center">
+                            <div class="step-num">01</div>
+                            <h4>Register</h4>
+                            <p>Create an account securely and access your personal AI health dashboard.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="step-card glass-card text-center">
+                            <div class="step-num">02</div>
+                            <h4>Upload or Capture</h4>
+                            <p>Upload a photo or use the browser camera to capture a hair or skin image.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="step-card glass-card text-center">
+                            <div class="step-num">03</div>
+                            <h4>Review Recommendations</h4>
+                            <p>Receive a demo AI assessment and wellness guidance for diet, routines, and home care.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="technology" class="section">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <span class="eyebrow">Technology Stack</span>
+                    <h2>Built with modern AI and web technologies</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="tech-card glass-card text-center">
+                            <i class="bi bi-filetype-py"></i>
+                            <h5>Python</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="tech-card glass-card text-center">
+                            <i class="bi bi-code-square"></i>
+                            <h5>Flask</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="tech-card glass-card text-center">
+                            <i class="bi bi-camera-video"></i>
+                            <h5>OpenCV</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="tech-card glass-card text-center">
+                            <i class="bi bi-cpu"></i>
+                            <h5>TensorFlow</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="section alt-bg">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <span class="eyebrow">Benefits</span>
+                    <h2>Designed for awareness, clarity, and better routines</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="benefit-card glass-card">
+                            <i class="bi bi-check2-circle"></i>
+                            <h4>Safe Guidance</h4>
+                            <p>Suggestions are framed as general wellness advice and can be used for educational, lifestyle-oriented support.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="benefit-card glass-card">
+                            <i class="bi bi-person-hearts"></i>
+                            <h4>Personalized</h4>
+                            <p>Recommendations adapt to the selected analysis type and your saved history to support routine consistency.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="benefit-card glass-card">
+                            <i class="bi bi-display"></i>
+                            <h4>Professional UI</h4>
+                            <p>A premium responsive layout makes the experience feel like a polished product rather than a basic prototype.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section disclaimer-section">
+            <div class="container">
+                <div class="glass-card disclaimer-box">
+                    <h3>Disclaimer</h3>
+                    <p>This project is designed for educational and prototype use. AI-generated hair and skin analysis results are general wellness insights, not medical diagnoses, and should not replace professional care or medical advice.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap gap-3">
+            <span>© {{ current_year }} AI Health Mirror Pro</span>
+            <span>Hair & Skin Analysis System</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
